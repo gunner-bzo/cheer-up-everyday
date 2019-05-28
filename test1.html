@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+    <title>cheer-up-everyday</title>
+	<script>
+	setInterval("cg.innerHTML=new Date().toLocaleString()",1000);
+
+    var text = "<br/>请查收今日份的加油(ง •̀_•́)ง    !  <br/>From Shanghai to Wuhan,<br/>cheer up every day !<br/>"; <!-- <br/>换行 -->
+    var num = text.length;
+
+    var i =0;
+    function show() {
+        var shower = text.substr(0,i);
+        document.getElementById("text1").innerHTML = shower;
+        i++;
+        if(i + 1 >= num){
+            clearInterval("done");
+        }
+    }
+    var done=setInterval("show()",80); <!--数字为速度,越小越快-->
+
+       		var num = 0;
+	        var t = setInterval(function(){
+		       num++;
+		       var span1 = document.getElementById("number1");
+		       span1.innerText = num;
+			        if(num==32){
+			        	clearInterval(t);
+			        }       
+	        },600);	
+	
+	</script>
+    <style type="text/css">
+        #test1
+        {						
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+            margin: auto;
+			
+            padding: 0px;
+            width: 720px;
+            height: 600px;
+            border: 6px solid red;
+            text-align: center; <!-- 会让此元素的内容和子元素的内容水平居中，注意：此元素和子元素并不水平居中 -->
+			<!-- border-radius:50px; 设置DIV对象盒子四个角50像素圆角效果 -->
+        }
+        #test2
+        {
+			position: fixed;
+			top: 200px;
+			left: -125px;
+			right: 0px;
+			bottom: 0px;
+            margin: auto;
+			
+            padding: 0px;
+            width: 600px;
+            height: 50px;
+            border: 5px solid transparent;
+            text-align: center;
+        }
+        #test3
+        {
+			position: fixed;
+			top: 285px;
+			left: 260px;
+			right: 0px;
+			bottom: 0px;
+            margin: auto;
+			
+            padding: 0px;
+            width: 600px;
+            height: 50px;
+            border: 5px solid transparent;
+            text-align: center;
+        }
+        #test4
+        {
+			position: fixed;
+			top: 200px;
+			left: 370px;
+			right: 0px;
+			bottom: 0px;
+            margin: auto;
+			
+            padding: 0px;
+            width: 600px;
+            height: 50px;
+            border: 5px solid transparent;
+            text-align: center;
+        }		
+        span
+        {
+            line-height: 100px; <!-- 行距 -->
+        }
+    </style>
+</head>
+<body>
+    <div id="test1" style="border-radius:50px;color:blue;font-weight:900;font-family:KaiTi;font-size:45px;">
+        <span id = "cg"></span>
+		<span id = "text1"></span>
+    </div>
+	<div id="test2" style="font-weight:900;font-family:KaiTi;font-size:60px;">
+		<p>丹丹加油,第</p>
+    </div>
+	<div id="test3" style="color:red;font-weight:900;font-family:KaiTi;font-size:60px;">
+		<span id = "number1">1</span>
+    </div>
+	<div id="test4" style="font-weight:900;font-family:KaiTi;font-size:60px;">
+		<p>次</p>
+    </div>		
+</body>
+</html>
